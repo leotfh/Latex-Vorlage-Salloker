@@ -1,0 +1,42 @@
+\input{setup}
+
+\begin{document}
+\include{frontmatter}
+
+\pagenumbering{arabic}
+\fancyhead[R]{\textbf{\nouppercase{\leftmark}}}
+
+\section{Teil 1}
+\subsection{Aufgabenstellung}
+\subsection{Schaltplan}
+\subsection{Schlussfolgerung}
+
+\begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{|X|X|X|} \hline
+         &  \textbf{Ideal}& \textbf{Real (gemessen)}\\ \hline 
+         R in $\Omega$&  1& 1\\ \hline 
+         L in mH&  1& 1\\ \hline 
+         C in nF&  1& 1\\ \hline
+         $R_L$ in $\Omega$& &1\\\hline
+    \end{tabularx}
+    \caption{Gegenüberstellung idealer und gemessener Werte}
+\end{table}
+
+\subsubsection{Berechnungen}
+$$f_{res} = \frac{1}{2 \cdot \pi \cdot \sqrt{L \cdot C}} = \SI{15,915}{\kilo \Hz}$$
+
+\newpage
+
+\section{Geräteverzeichnis}
+
+\begin{itemize}
+    \item Keysight U1733C (LCR-Messgerät)
+    \item Keysight InfiniiVision DSO-X 3014T (Oszilloskop)
+    \item Keysight 33500B Series (Signalgenerator)
+    \item Keysight 1233A (Handmultimeter)
+\end{itemize}
+
+\include{signatures}
+
+\end{document}

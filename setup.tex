@@ -1,0 +1,112 @@
+\documentclass[11pt,a4paper, top=3cm, left=2.5cm, right=2.5cm, bottom=4cm]{article}
+\usepackage{fontspec}
+\usepackage{textcomp}
+\usepackage{unicode-math}
+%\setmainfont{Libertinus Serif}
+\setmathfont{Libertinus Math}
+% \setmainfont{XITS}
+% \setmathfont{XITS Math}
+% \setmainfont[ExternalLocation=Fonts/Caladea/]{Caladea-Regular.ttf}%
+%   [Ligatures=TeX, % Tex
+%   BoldFont=Caladea-Bold.ttf,
+%   ItalicFont=Caladea-Italic.ttf,
+%   BoldItalicFont=Caladea-BoldItalic.ttf]
+\setmainfont[ExternalLocation=Fonts/cambria/]{cambria.ttc}%
+  [BoldFont=CAMBRIAB.ttf,
+  ItalicFont=CAMBRIAI.ttf]
+\usepackage{chngcntr}
+\usepackage{setspace}
+
+% Set the line spacing to 19pt
+\setstretch{1.37}
+
+\usepackage{geometry}
+ \geometry{
+ left=25mm,
+ right=25mm,
+ top=30mm,
+ bottom=40mm
+ }
+\usepackage{floatrow}
+\floatplacement{figure}{H} % !ht
+\floatplacement{table}{H} % !ht
+\usepackage[singlelinecheck=off]{caption}
+\usepackage{tabularx, booktabs}
+% \DeclareCaptionFormat{custom}
+% {%
+%     \textbf{\small #1#2}\small #3   % Formatierung für Beschriftungen
+% }
+\captionsetup[figure]{justification=centering, , labelfont=bf}            % Formatierung für Beschriftungen
+\captionsetup[table]{justification=raggedright, indention=.5cm, labelfont=bf}
+\usepackage{matlab-prettifier}
+\usepackage{minted}                     % Package für Code-Darstellung
+\usemintedstyle{pastie}
+% \usepackage[framemethod=tikz]{mdframed}
+% \mdfdefinestyle{matlab}{%           % Environment für MatLab-Darstellung von Code
+%   outerlinewidth=.5pt,
+%   linecolor=gray!20!white,
+%   roundcorner=2pt,
+%   innertopmargin=.5\baselineskip,
+%   innerbottommargin=.5\baselineskip,
+%   innerleftmargin=1em,
+%   backgroundcolor=gray!10!white
+% }
+% \newenvironment{matlabcode}{\Verbatim}{\endVerbatim}
+% \surroundwithmdframed[style=matlabcode]{matlabcode}
+
+% \definecolor{output}{gray}{0.4}
+% \newenvironment{matlaboutput}{%         % Environment für MatLab-Dartstellung von Ausgabewerten
+%   \Verbatim[xleftmargin=1.25em, formatcom=\color{output}]%
+% }{\endVerbatim}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+\usepackage{adjustbox}
+\usepackage{amsmath}
+\usepackage{siunitx} % Für SI Einheiten
+\sisetup{locale = DE}
+\usepackage{fancyvrb}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{datetime}
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\counterwithin{figure}{section}
+\usepackage{multirow}
+\renewcommand\thetable{\thesection.\arabic{table}}
+\counterwithin{table}{section}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+linktoc=all
+}
+
+\makeatletter
+\renewcommand\listoftables{%
+        \@starttoc{lot}%
+}
+\renewcommand\listoffigures{%
+        \@starttoc{lof}%
+}
+\makeatother
+
+\lstdefinestyle{DOS}                % Ausgabeformat für Consolen-Output
+{
+    backgroundcolor=\color{white},
+    basicstyle=\scriptsize\color{black}\ttfamily
+}
+
+\addto\captionsngerman{% Replace "english" with the language you use
+  \renewcommand{\contentsname}{Inhalt}}
+
+\usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{lmodern}
+\usepackage{color}
+% \usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{epstopdf}
+\usepackage[table]{xcolor}
+\usepackage{matlab}
